@@ -1,0 +1,121 @@
+#detail{
+    width: 1100px;
+    heigth:100%;
+    position: relative;
+    margin:0 auto;
+    top: 40px;
+}
+#detail-img{
+    height:380px;
+    width: 340px;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: #c0c0c0;
+}
+#detail-inf{
+    height:380px;
+    width:740px;
+    position: absolute;
+    top:0;
+    right:0;
+    background: #A89696;
+}
+#detail-brief{
+    height:120px;
+    width: 100%;
+    background: #ccc;
+    position:absolute;
+    top:380px;
+}
+#img-inf{
+    height: 285px;
+    width: 320px;
+    position: absolute;
+    top:20px;
+    left:10px;
+}
+#img-inf img{
+    height:100%;
+    width:100%;
+}
+#id-select{
+    height:40px;
+    width: 340px;
+    position: absolute;
+    top: 320px;
+}
+#id-select li{
+    height: 40px;
+    width:50px;
+    margin-left: 20px;
+    float: left;
+    background: #c40e1a;
+}
+#id-select li img{
+    height: 100%;
+    width:100%;
+}
+#inf-option{
+    height:380px;
+    width:400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    background: #A89696;
+}
+#inf-option li{
+    height:50px;
+    width: 100%;
+    margin-top: 5px;
+}
+#inf-option .detail-name p{
+    text-align: center;
+    font: 20px/50px 'Microsoft Yahei',STHeiti,"sans-serif";
+    color: #fff;
+}
+#inf-option .detail-price span{
+     text-align: center;
+     font: 16px/50px 'Microsoft Yahei',STHeiti,"sans-serif";
+     color: #fff;
+ }
+#inf-option .detail-size span{
+    text-align: center;
+    font: 16px/50px 'Microsoft Yahei',STHeiti,"sans-serif";
+    color: #fff;
+    float:left;
+}
+#d-size li{
+    text-align: center;
+    font: 16px/30px 'Microsoft Yahei',STHeiti,"sans-serif";
+    color: #fff;
+    width:50px;
+    float: left;
+    height: 25px;
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#inf-option .detail-num span{
+    text-align: center;
+    font: 16px/50px 'Microsoft Yahei',STHeiti,"sans-serif";
+    color: #fff;
+   cursor:pointer;
+}
+#product-num{
+    width: 50px;
+}
+#brief-text{
+    height:30px;
+    font: 16px/30px 'Microsoft Yahei',STHeiti,"sans-serif";
+    margin-left: 10px;
+}
+#brief-p{
+    font: 16px 'Microsoft Yahei',STHeiti,"sans-serif";
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.selected{
+    border: 1px solid coral;
+}

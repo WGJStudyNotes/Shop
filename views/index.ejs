@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美味菜单</title>
+	<link rel="stylesheet" href="../stylesheets/index.css">
+	<link rel="stylesheet" href="../stylesheets/mose.css">
+</head>
+<body>
+<div id="header">
+	<span id="username"><%=loginUser? '欢迎：'+loginUser.username:''%></span>
+	<ul id="header-ul">
+		<li id="logo"></li>
+		<li class="head-li" ><a href="" class="head-a" id="opan">美味菜单</a>
+			<div id="secondary-menu">
+				<ul id="secondary-ul">
+					<li class="secondary-li"><a href="" class="secondary-a">新品推荐</a></li>
+					<li class="secondary-li"><a href="" class="secondary-a">休闲时光</a></li>
+					<li class="secondary-li"><a href="" class="secondary-a">记忆味道</a></li>
+					<li class="secondary-li"><a href="" class="secondary-a">清凉一夏</a></li>
+					<li class="secondary-li"><a href="" class="secondary-a">欢乐夜宵</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="head-li"><a href="" class="head-a">热门活动</a></li>
+		<li class="head-li"><a href="" class="head-a">餐厅查询</a></li>
+		<li class="head-li"><a href="" class="head-a">礼品卡</a></li>
+		<li class="head-li"><a href="" class="head-a">会员招募</a></li>
+		<li class="head-li"><a href="" class="head-a">特许经营</a></li>
+	</ul>
+	<div id="login">
+		<a href="/regist">注册</a>
+		<a href="/login">登陆</a>
+	</div>
+</div>
+<div id="background-img">
+<div id="show-left">
+	<div id="small-img">
+		<ul id="small-ul">
+			<li><a href=""><img src="../images/small1.jpg"></a></li>
+			<li><a href=""><img src="../images/small2.jpg"></a></li>
+			<li><a href=""><img src="../images/small3.jpg"></a></li>
+			<li><a href=""><img src="../images/small4.jpg"></a></li>
+		</ul>
+	</div>
+	<div id="small-title">
+		<ul id='title-ul'>
+			<li><a href="">604</a></li>
+			<li><a href="">都是好人</a></li>
+			<li><a href="">628</a></li>
+			<li><a href="">也都还行</a></li>
+		</ul>
+	</div>
+	<div id="coil"></div>
+	<div id="sign">
+		<ul>
+			<li class="selected"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div id="info">
+		<a href="">更多活动>></a>
+	</div>
+</div>
+<div id="show-right" class="wrap">
+	<ul class="col">
+	</ul>
+	<ul class="col">
+
+	</ul>
+
+</div>
+</div>
+<script src='../javascripts/jquery-1.12.3.js'></script>
+<script src='../javascripts/index.js'></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="container">
+        <h1 id="Welcome">Welcome</h1>
+
+        <form id="form" action="/login" method="post">
+            <input type="text" placeholder="Username" id='input' name="username">
+            <input type="password" placeholder="Password" id='input2' name="pass">
+            <!--<button type="submit" id="login-button" name="sub">Login</button>-->
+            <input type="submit" id="login-button" name="sub" value="登录">
+        </form>
+    </div>
+    <ul id="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src='../javascripts/jquery-1.12.3.js'></script>
+<script>
+    $(function(){
+        var $Form=$('#form');
+        var string;
+        $("input",$Form).focusin(function(){
+            string=$(this).attr('placeholder');
+            $(this).attr('placeholder',"");
+            $(this).animate({
+                opacity:1,
+                left:-10,
+                width:300
+            });
+        });
+        $('input',$Form).focusout(function(){
+            $(this).attr('placeholder',string);
+            $(this).animate({
+                opacity:0.4,
+                left:0,
+                width:250
+            });
+        });
+    });
+</script>
+</html>

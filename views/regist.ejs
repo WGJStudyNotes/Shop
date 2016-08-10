@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/stylesheets/regist.css">
+</head>
+<body>
+<form action="/users/regist" method="post">
+    <p>
+        用户名：<input type="text" name="username" id="username"><span class="info"></span>
+    </p>
+    <p>
+        密  码：<input type="password" name="password">
+    </p>
+    <p>
+        性  别：<input type="radio" name="sex" value="男">男
+                <input type="radio" name="sex" value="女">女
+    </p>
+    <p>
+                <input type="submit" value="注册">
+    </p>
+</form>
+<script src="/javascripts/jquery-1.12.3.js"></script>
+<script src="/javascripts/regist.js"></script>
+<script>
+    $(function(){
+    $('#username').on('blur',function(){
+            var that=this;
+            //四个参数，1发送请的地址,2.发送的数据，3.回调函数，4.返 回值类型；
+            $.get('/users/checkUser',{username:this.value},function(data){
+            if(data=='file'){
+            $(that).next('.info').addClass('error').html('用户名已存在！');
+            }
+            else{
+            $(that).next('.info').html("√");
+            }
+            },'text');
+            })
+
+
+    });
+</script>
+</body>
+</html>

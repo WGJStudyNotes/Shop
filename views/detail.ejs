@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/detail.css">
+
+</head>
+<body>
+<div id="header">
+    <span id="username"><%=loginUser? '欢迎：'+loginUser.username:''%></span>
+    <ul id="header-ul">
+        <li id="logo"><a href="" class="head-a"></a></li>
+        <li><a href="" class="head-a" id="opan">美味菜单</a>
+            <div id="secondary-menu">
+                <ul id="secondary-ul">
+                    <li><a href="" class="secondary-a">新品推荐</a></li>
+                    <li><a href="" class="secondary-a">休闲时光</a></li>
+                    <li><a href="" class="secondary-a">记忆味道</a></li>
+                    <li><a href="" class="secondary-a">清凉一夏</a></li>
+                    <li><a href="" class="secondary-a">欢乐夜宵</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="" class="head-a">热门活动</a></li>
+        <li><a href="" class="head-a">餐厅查询</a></li>
+        <li><a href="" class="head-a">礼品卡</a></li>
+        <li><a href="" class="head-a">会员招募</a></li>
+        <li><a href="" class="head-a">特许经营</a></li>
+    </ul>
+    <div id="login">
+        <a href="/regist">注册</a>
+        <a href="/login">登陆</a>
+    </div>
+</div>
+<div id="detail">
+    <div id="detail-img">
+        <div id="img-inf">
+            <img src="../<%=product.productImg[0].img_src%>" alt="">
+        </div>
+            <ul id="id-select">
+                <%
+                 for (var i=0;i<product.productImg.length;i++){
+                    %>
+                <li><img src="../<%=product.productImg[i].img_src%>" alt=""></li>
+                <%
+                 }
+                  %>
+            </ul>
+    </div>
+    <div id="detail-inf">
+        <div id="inf-option">
+            <form action="" id="product-from">
+                <input type="hidden" name="product-size" id="product-size">
+                <ul>
+                    <li class="detail-name">
+                        <p><%=product.prod_name%></p>
+                    </li>
+                    <li class="detail-price">
+                        <span class="product-price">
+                            <%
+                             var size = product.productSize;
+                                size.sort(function(a,b){
+                                    return a.size_price - b.size_price;
+                                });
+                              %>
+                            <%=size[0].size_price%>-<%=size[size.length-1].size_price%>
+                        </span>
+                    </li>
+                    <li class="detail-size">
+                        <span>大小:</span>
+                        <ul id="d-size">
+                            <%
+                             for (var i=0;i<size.length;i++){
+                            %>
+                            <li data-price="<%=size[i].size_price%>">
+                                <%=size[i].size_num%>
+                            </li>
+                            <%
+                            }
+                              %>
+                        </ul>
+                    </li>
+                    <li class="detail-num">
+                        <span>数量:</span>
+                        <input type="text" id="product-num"/>
+                    </li>
+                    <li>
+                        <input type="submit" value="立即购买"/>
+                        <input type="submit" value="加入购物车"/>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div id="detail-brief">
+        <div id="brief-text">商品简介：</div>
+        <p id="brief-p"><%=product.prod_desc%></p>
+    </div>
+</div>
+<script src='../javascripts/jquery-1.12.3.js'></script>
+<script src='../javascripts/jquery-numinput.js'></script>
+<script src='../javascripts/index.js'></script>
+<script src='../javascripts/detail.js'></script>
+
+</body>
+</html>
